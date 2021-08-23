@@ -14,6 +14,14 @@ Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+
+Plug 'jiangmiao/auto-pairs'
+
+" For HTML
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 source ~/.config/nvim/cocconfig.vim
@@ -83,3 +91,4 @@ nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 
+nnoremap <leader>o o<esc>
