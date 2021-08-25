@@ -92,6 +92,8 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 
 nnoremap <leader>o o<esc>
+nnoremap <leader>o O<esc>
+
 
 :nnoremap <C-n> :CocCommand explorer<CR>
 
