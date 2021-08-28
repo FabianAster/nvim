@@ -82,6 +82,7 @@ nnoremap gs <C-^>
 
 nnoremap gl :w<CR>:bn<CR>
 nnoremap gh :w<CR>:bp<CR>
+nnoremap <leader>v <C-w>v
 
 nnoremap <leader>u :UndotreeToggle<CR>
 
@@ -97,6 +98,7 @@ nnoremap <leader>o o<esc>
 nnoremap <leader>d :CocDiagnostics<CR>
 
 nnoremap <C-n> :CocCommand explorer<CR>
+
 
 lua << EOF
 require('hardline').setup {
