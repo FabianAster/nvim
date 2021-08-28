@@ -99,6 +99,7 @@ nnoremap <leader>d :CocDiagnostics<CR>
 
 nnoremap <C-n> :CocCommand explorer<CR>
 
+nnoremap <leader>q :bd<CR>
 
 lua << EOF
 require('hardline').setup {
