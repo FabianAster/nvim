@@ -94,6 +94,8 @@ nnoremap <leader>b <cmd>Telescope buffers<cr>
 
 nnoremap <leader>O O<esc>
 nnoremap <leader>o o<esc>
+nnoremap <leader>o O<esc>
+
 
 nnoremap <leader>d :CocDiagnostics<CR>
 
