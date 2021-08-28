@@ -91,9 +91,12 @@ nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 
+nnoremap <leader>O O<esc>
 nnoremap <leader>o o<esc>
 
-:nnoremap <C-n> :CocCommand explorer<CR>
+nnoremap <leader>d :CocDiagnostics<CR>
+
+nnoremap <C-n> :CocCommand explorer<CR>
 
 lua << EOF
 require('hardline').setup {
