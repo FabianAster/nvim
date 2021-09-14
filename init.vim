@@ -1,4 +1,5 @@
 set nocompatible
+set background=dark
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
@@ -39,7 +40,7 @@ set colorcolumn=80
 set background=dark
 set nowrap
 set smartcase
-set hlsearch
+set nohlsearch
 set noerrorbells
 set tabstop=2 softtabstop=2
 set shiftwidth=4
@@ -124,3 +125,4 @@ require('hardline').setup {
   },
 }
 EOF
+set background=dark
