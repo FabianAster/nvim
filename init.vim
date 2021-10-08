@@ -33,6 +33,7 @@ let mapleader = " "
 
 syntax on
 
+set clipboard=unnamed
 set termguicolors
 set number
 set relativenumber
