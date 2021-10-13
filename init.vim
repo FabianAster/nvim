@@ -27,13 +27,14 @@ call plug#end()
 
 source ~/.config/nvim/cocconfig.vim
 
+set clipboard+=unnamedplus
+
 colorscheme gruvbox
 
 let mapleader = " "
 
 syntax on
 
-set clipboard=unnamed
 set termguicolors
 set number
 set relativenumber
@@ -50,6 +51,7 @@ set smartindent
 set smartcase
 set noswapfile
 set incsearch
+set encoding=utf-8
 
 set undodir=~/.config/nvim/undotree
 set undofile
@@ -126,4 +128,3 @@ require('hardline').setup {
   },
 }
 EOF
-set background=dark
