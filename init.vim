@@ -23,6 +23,10 @@ Plug 'mattn/emmet-vim'
 
 Plug 'ojroques/nvim-hardline'
 
+Plug 'frazrepo/vim-rainbow'
+
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 source ~/.config/nvim/cocconfig.vim
@@ -34,6 +38,8 @@ colorscheme gruvbox
 let mapleader = " "
 
 syntax on
+
+set mouse=a
 
 set termguicolors
 set number
@@ -64,7 +70,6 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
-
 
 map <silent> <C-n> :NERDTreeFocus <CR>
 
@@ -104,6 +109,9 @@ nnoremap <leader>d :CocDiagnostics<CR>
 nnoremap <C-n> :CocCommand explorer<CR>
 
 nnoremap <leader>q :bd<CR>
+
+nnoremap <leader>gk :diffget //3<CR>
+nnoremap <leader>gj :diffget //2<CR>
 
 lua << EOF
 require('hardline').setup {
