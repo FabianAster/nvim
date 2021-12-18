@@ -113,6 +113,14 @@ nnoremap <leader>q :bd<CR>
 nnoremap <leader>gk :diffget //3<CR>
 nnoremap <leader>gj :diffget //2<CR>
 
+nnoremap <leader>r :vertical resize 
+
+nnoremap <leader>i <C-w>v <bar> <C-w>l <bar> :below vertical terminal<CR>
+
+nnoremap <leader>a :CocAction <CR>
+
+tnoremap <Esc> <C-\><C-n>
+
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
 if executable(s:clip)
