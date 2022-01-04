@@ -41,6 +41,8 @@ syntax on
 
 set mouse=a
 
+set buftype=""
+
 set termguicolors
 set number
 set relativenumber
@@ -115,7 +117,7 @@ nnoremap <leader>gj :diffget //2<CR>
 
 nnoremap <leader>r :vertical resize 
 
-nnoremap <leader>i <C-w>v <bar> <C-w>l <bar> :below vertical terminal<CR>
+nnoremap <leader>i <C-w>v <bar> <C-w>l <bar> :term<CR>
 
 nnoremap <leader>a :CocAction <CR>
 
