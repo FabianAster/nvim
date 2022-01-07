@@ -22,3 +22,7 @@ sudo apt-get install neovim
 
 echo clangd install
 sudo apt install clangd
+
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
