@@ -12,6 +12,7 @@ echo node js Installieren
 sudo npm install n -g
 sudo n stable
 
+sudo apt-get install python-dev python-pip python3-dev python3-pip
 
 echo Nvim Installieren
 sudo add-apt-repository ppa:neovim-ppa/stable
@@ -22,5 +23,6 @@ sudo apt-get install neovim
 echo clangd install
 sudo apt install clangd
 
-sudo update-alternatives --install $(which vim) vim $(which nvim) 10
-sudo update-alternatives --config vim
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
