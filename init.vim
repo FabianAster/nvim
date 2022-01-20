@@ -27,6 +27,8 @@ Plug 'frazrepo/vim-rainbow'
 
 Plug 'tpope/vim-fugitive'
 
+Plug 'justinmk/vim-sneak'
+
 call plug#end()
 
 source ~/.config/nvim/cocconfig.vim
@@ -112,8 +114,8 @@ nnoremap <C-n> :CocCommand explorer<CR>
 
 nnoremap <leader>q :bd<CR>
 
-nnoremap <leader>gk :diffget //3<CR>
-nnoremap <leader>gj :diffget //2<CR>
+nnoremap <A-l> :diffget //3<CR>
+nnoremap <A-h> :diffget //2<CR>
 
 nnoremap <leader>r :vertical resize 
 
