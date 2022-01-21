@@ -3,6 +3,7 @@ set background=dark
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -29,13 +30,15 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'justinmk/vim-sneak'
 
+Plug 'ThePrimeagen/vim-be-good'
+
 call plug#end()
 
 source ~/.config/nvim/cocconfig.vim
 
 set clipboard+=unnamedplus
 
-colorscheme gruvbox
+colorscheme gruvbox-material
 
 let mapleader = " "
 
@@ -124,6 +127,16 @@ nnoremap <leader>i <C-w>v <bar> <C-w>l <bar> :term<CR>
 nnoremap <leader>a :CocAction <CR>
 
 tnoremap <Esc> <C-\><C-n>
+
+nmap ö <Plug>Sneak_s
+nmap Ö <Plug>Sneak_S
+
+xmap ö <Plug>Sneak_s
+xmap Ö <Plug>Sneak_S
+
+omap ö <Plug>Sneak_s
+omap Ö <Plug>Sneak_S
+
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
