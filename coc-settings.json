@@ -1,29 +1,44 @@
 {
-  "explorer.width": 30,
-  "explorer.previewAction.onHover": false,
-  "explorer.keyMappings.global": {
-    "<cr>": ["expandable?", "expand", "open"],
-    "v": "open:vsplit"
- },
-      "languageserver": {
+    "explorer.width": 30,
+    "explorer.previewAction.onHover": false,
+    "explorer.keyMappings.global": {
+        "<cr>": [
+            "expandable?",
+            "expand",
+            "open"
+        ],
+        "v": "open:vsplit"
+    },
+    "languageserver": {
         "haskell": {
-          "command": "haskell-language-server-wrapper",
-          "args": [
-            "--lsp"
-          ],
-          "rootPatterns": [
-            ".stack.yaml",
-            ".hie-bios",
-            "BUILD.bazel",
-            "cabal.config",
-            "package.yaml"
-          ],
-          "filetypes": [
-            "hs",
-            "lhs",
-            "haskell"
-          ]
+            "command": "haskell-language-server-wrapper",
+            "args": [
+                "--lsp"
+            ],
+            "rootPatterns": [
+                ".stack.yaml",
+                ".hie-bios",
+                "BUILD.bazel",
+                "cabal.config",
+                "package.yaml"
+            ],
+            "filetypes": [
+                "hs",
+                "lhs",
+                "haskell"
+            ]
         }
-      }
+    },
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "markdown",
+        "javascript",
+        "graphql",
+        "html",
+        "yaml",
+        "json"
+    ],
+    // python config
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true
 }
-
