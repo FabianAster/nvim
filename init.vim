@@ -43,6 +43,8 @@ colorscheme gruvbox-material
 
 let mapleader = " "
 
+let g:airline#extensions#whitespace#enabled = 0
+
 syntax on
 
 let g:airline#extensions#tabline#enabled = 1
