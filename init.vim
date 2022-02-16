@@ -33,6 +33,9 @@ Plug 'justinmk/vim-sneak'
 
 Plug 'ThePrimeagen/vim-be-good'
 
+" React Snippets:
+" Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
+
 call plug#end()
 
 source ~/.config/nvim/cocconfig.vim
@@ -78,10 +81,10 @@ set undofile
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=**/coverage/*
+set wildignore+=**/node%_modules/*
 set wildignore+=**/node_modules/*
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
-set wildignore+=**/.git/*
 
 map <silent> <C-n> :NERDTreeFocus <CR>
 
@@ -141,7 +144,6 @@ xmap Ö <Plug>Sneak_S
 
 omap ö <Plug>Sneak_s
 omap Ö <Plug>Sneak_S
-
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
