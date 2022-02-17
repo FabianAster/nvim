@@ -135,6 +135,7 @@ nnoremap <leader>i <C-w>v <bar> <C-w>l <bar> :term<CR>
 nnoremap <leader>a :CocAction <CR>
 
 tnoremap <Esc> <C-\><C-n>
+nmap <leader><C-r> iconst<space>"filename"<space>=<space>()<space>=><space>{<newline><space><space><space><space>return<space>(<newline><space><space><space><space><div><newline><space><space><space><space></div><newline>)<newline>}<newline><newline>export<space>default<space>"filename"<esc>
 
 nmap ö <Plug>Sneak_s
 nmap Ö <Plug>Sneak_S
