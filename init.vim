@@ -8,9 +8,7 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'camspiers/snap'
 
 Plug 'mbbill/undotree'
 
@@ -111,10 +109,6 @@ nnoremap <leader>v <C-w>v
 nnoremap <leader>u :UndotreeToggle<CR>
 
 nnoremap <leader>H :set invhlsearch<CR>
-
-nnoremap <C-p> <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>b <cmd>Telescope buffers<cr>
 
 nnoremap <leader>O O<esc>
 nnoremap <leader>o o<esc>
