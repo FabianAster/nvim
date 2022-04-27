@@ -131,6 +131,11 @@ nnoremap <leader>a :CocAction<CR>
 tnoremap <Esc> <C-\><C-n>
 nmap <leader><C-r> iconst<space>"filename"<space>=<space>()<space>=><space>{<newline><space><space><space><space>return<space>(<newline><space><space><space><space><div><newline><space><space><space><space></div><newline>)<newline>}<newline><newline>export<space>default<space>"filename"<esc>
 
+nmap <leader>fo :edit ~/.config/nvim/init.vim<CR>
+nmap <leader>fi :source ~/.config/nvim/init.vim<CR>
+
+nmap <leader>c :!cp ~/.config/nvim/templates/Makefile ./<CR>
+
 nmap <leader>t :vert term<CR>
 
 nmap ö <Plug>Sneak_s
