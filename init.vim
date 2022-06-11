@@ -92,9 +92,6 @@ nnoremap <leader>P "+P
 vnoremap <leader>y "+y
 vnoremap <leader>Y "+y$
 
-nnoremap <expr> k (v:count > 3 ? "m'" . v:count : "") .'k'
-nnoremap <expr> j (v:count > 3 ? "m'" . v:count : "") .'j'
-
 nnoremap <leader>h <C-w>h
 nnoremap <leader>l <C-w>l
 nnoremap <leader>j <C-w>j
