@@ -25,8 +25,6 @@ Plug 'mattn/emmet-vim'
 
 Plug 'frazrepo/vim-rainbow'
 
-Plug 'tpope/vim-fugitive'
-
 Plug 'justinmk/vim-sneak'
 
 Plug 'ThePrimeagen/vim-be-good'
