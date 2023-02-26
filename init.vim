@@ -1,6 +1,8 @@
 set nocompatible
 set background=dark
 
+set rtp+=~/.fzf
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
@@ -8,6 +10,7 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'junegunn/fzf.vim'
 Plug 'camspiers/snap'
 
 Plug 'mbbill/undotree'
@@ -17,6 +20,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 Plug 'jiangmiao/auto-pairs'
+
+
+" transparent:
+Plug 'tribela/vim-transparent'
 
 " For HTML
 Plug 'alvan/vim-closetag'
@@ -45,6 +52,7 @@ colorscheme gruvbox-material
 let mapleader = " "
 
 let g:airline#extensions#whitespace#enabled = 0
+let g:gruvbox_material_ui_contrast = 'high'
 
 syntax on
 
@@ -127,6 +135,8 @@ nnoremap <leader>r :vertical resize
 nnoremap <leader>i <C-w>v <bar> <C-w>l <bar> :term<CR>
 
 nnoremap <leader>a :CocAction<CR>
+
+nmap <leader>c :!cp ~/.config/nvim/templates/Makefile ./<CR>
 
 tnoremap <Esc> <C-\><C-n>
 nmap <leader><C-r> iconst<space>"filename"<space>=<space>()<space>=><space>{<newline><space><space><space><space>return<space>(<newline><space><space><space><space><div><newline><space><space><space><space></div><newline>)<newline>}<newline><newline>export<space>default<space>"filename"<esc>
