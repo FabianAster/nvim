@@ -10,8 +10,8 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'junegunn/fzf.vim'
-Plug 'camspiers/snap'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 Plug 'mbbill/undotree'
 
@@ -31,8 +31,6 @@ Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 
 Plug 'frazrepo/vim-rainbow'
-
-Plug 'tpope/vim-fugitive'
 
 Plug 'justinmk/vim-sneak'
 
@@ -100,9 +98,6 @@ nnoremap <leader>P "+P
 vnoremap <leader>y "+y
 vnoremap <leader>Y "+y$
 
-nnoremap <expr> k (v:count > 3 ? "m'" . v:count : "") .'k'
-nnoremap <expr> j (v:count > 3 ? "m'" . v:count : "") .'j'
-
 nnoremap <leader>h <C-w>h
 nnoremap <leader>l <C-w>l
 nnoremap <leader>j <C-w>j
@@ -141,6 +136,11 @@ nmap <leader>c :!cp ~/.config/nvim/templates/Makefile ./<CR>
 tnoremap <Esc> <C-\><C-n>
 nmap <leader><C-r> iconst<space>"filename"<space>=<space>()<space>=><space>{<newline><space><space><space><space>return<space>(<newline><space><space><space><space><div><newline><space><space><space><space></div><newline>)<newline>}<newline><newline>export<space>default<space>"filename"<esc>
 
+nmap <leader>fo :edit ~/.config/nvim/init.vim<CR>
+nmap <leader>fi :source ~/.config/nvim/init.vim<CR>
+
+nmap <leader>c :!cp ~/.config/nvim/templates/Makefile ./<CR>
+
 nmap <leader>t :vert term<CR>
 
 nmap ö <Plug>Sneak_s
@@ -151,6 +151,11 @@ xmap Ö <Plug>Sneak_S
 
 omap ö <Plug>Sneak_s
 omap Ö <Plug>Sneak_S
+
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " WSL yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point

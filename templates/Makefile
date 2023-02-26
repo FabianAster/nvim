@@ -9,6 +9,10 @@ all: ö
 clean:
 	$(RM) ö
 
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 811d6bb3d455e9893fe560a34c7cf39daa464e44
 ö: ö.c
 	gcc $(CFLAGS) $^ -o ö $(LFLAGS)
