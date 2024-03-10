@@ -11,6 +11,7 @@ vim.api.nvim_set_keymap("n", "gs", "<C-^>", {})
 vim.api.nvim_set_keymap("n", "gl", ":w<CR>:bn<CR>", {})
 vim.api.nvim_set_keymap("n", "gh", ":w<CR>:bp<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>v", "<C-w>v", {})
+vim.api.nvim_set_keymap("n", "<leader>s", "<C-w>s", {})
 vim.api.nvim_set_keymap("n", "<leader>q", ":bd<CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>u", ":UndotreeToggle<CR>", {})
@@ -25,10 +26,6 @@ vim.api.nvim_set_keymap("n", "<A-h>", ":diffget //2<CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>r", ":vertical resize ", {})
 
-vim.api.nvim_set_keymap("n", "<leader>i", "<leader>v <leader>l :term<CR>", {})
-
-vim.api.nvim_set_keymap("n", "<leader>c", ":!cp ~/.config/nvim/templates/Makefile ./<CR>", {})
-
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {})
 vim.api.nvim_set_keymap(
   "n",
@@ -39,8 +36,6 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap("n", "<leader>fo", ":edit ~/.config/nvim/init.vim<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>fi", ":source ~/.config/nvim/init.vim<CR>", {})
-
-vim.api.nvim_set_keymap("n", "<leader>c", ":!cp ~/.config/nvim/templates/Makefile ./<CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>t", ":vert term<CR>", {})
 
@@ -64,5 +59,14 @@ vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<cr>", {})
 
 -- Chat
 
-vim.api.nvim_set_keymap("n", "<leader>ccl", ":CopilotChatInPlace<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>a", ":CopilotChat ", {})
+
+-- toggel comments
+
+vim.api.nvim_set_keymap("n", "<leader>7", ":CommentToggle<cr>", {})
+vim.api.nvim_set_keymap("v", "<leader>7", ":CommentToggle<cr>", {})
+
+-- Terminal
+
+vim.api.nvim_set_keymap("n", "<leader>i", ":ToggleTerm<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>ga", ":ToggleTermToggleAll<cr>", {})
