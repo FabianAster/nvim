@@ -70,3 +70,14 @@ vim.api.nvim_set_keymap("v", "<leader>7", ":CommentToggle<cr>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>i", ":ToggleTerm<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>ga", ":ToggleTermToggleAll<cr>", {})
+
+local Terminal = require("toggleterm.terminal").Terminal
+local htop =
+  Terminal:new({ cmd = "htop", hidden = true, direction = "float", close_on_exit = true, start_in_insert = true })
+
+function htop_term()
+  htop:toggle()
+end
+
+vim.api.nvim_set_keymap("n", "<leader>gp", "<cmd>lua htop_term()<CR>", { noremap = true, silent = true })
+vim.api.nvim_command("Copilot disable")
