@@ -53,6 +53,8 @@ vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", {})
 
+vim.api.nvim_set_keymap("n", "<leader>w", "<C-w><C-w>", {})
+
 -- Tree
 
 vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<cr>", {})
@@ -81,3 +83,9 @@ end
 
 vim.api.nvim_set_keymap("n", "<leader>gp", "<cmd>lua htop_term()<CR>", { noremap = true, silent = true })
 vim.api.nvim_command("Copilot disable")
+
+-- jupyther
+
+vim.api.nvim_set_keymap("v", "<leader>e", ":<C-u>MoltenEvaluateVisual<CR>gv", {})
+
+vim.api.nvim_set_keymap("n", "<leader>ch", ":lua vim.lsp.buf.hover()<CR>", {})
