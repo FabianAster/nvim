@@ -1,3 +1,4 @@
+require("config.harpoon")
 -- Lua
 vim.api.nvim_set_keymap("n", "<C-n>", ":NERDTreeFocus<CR>", { silent = true })
 
@@ -28,10 +29,10 @@ vim.api.nvim_set_keymap("n", "<leader>r", ":vertical resize ", {})
 
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {})
 vim.api.nvim_set_keymap(
-  "n",
-  "<leader><C-r>",
-  'iconst "filename" = () => { return ( <div> </div> ) } export default "filename"<esc>',
-  {}
+    "n",
+    "<leader><C-r>",
+    'iconst "filename" = () => { return ( <div> </div> ) } export default "filename"<esc>',
+    {}
 )
 
 vim.api.nvim_set_keymap("n", "<leader>fo", ":edit ~/.config/nvim/init.vim<CR>", {})
@@ -75,10 +76,10 @@ vim.api.nvim_set_keymap("n", "<leader>ga", ":ToggleTermToggleAll<cr>", {})
 
 local Terminal = require("toggleterm.terminal").Terminal
 local htop =
-  Terminal:new({ cmd = "htop", hidden = true, direction = "float", close_on_exit = true, start_in_insert = true })
+    Terminal:new({ cmd = "htop", hidden = true, direction = "float", close_on_exit = true, start_in_insert = true })
 
 function htop_term()
-  htop:toggle()
+    htop:toggle()
 end
 
 vim.api.nvim_set_keymap("n", "<leader>gp", "<cmd>lua htop_term()<CR>", { noremap = true, silent = true })
@@ -88,4 +89,4 @@ vim.api.nvim_command("Copilot disable")
 
 vim.api.nvim_set_keymap("v", "<leader>e", ":<C-u>MoltenEvaluateVisual<CR>gv", {})
 
-vim.api.nvim_set_keymap("n", "<leader>ch", ":lua vim.lsp.buf.hover()<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>cg", ":lua vim.lsp.buf.hover()<CR>", {})
