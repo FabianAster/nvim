@@ -92,3 +92,5 @@ vim.api.nvim_set_keymap("v", "<leader>e", ":<C-u>MoltenEvaluateVisual<CR>gv", {}
 vim.api.nvim_set_keymap("n", "<leader>cg", ":lua vim.lsp.buf.hover()<CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>ct", ":TodoTelescope<CR>", {})
+
+vim.api.nvim_set_keymap("n", "<leader>ce", ":Telescope diagnostics<CR>", {})
