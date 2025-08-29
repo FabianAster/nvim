@@ -62,8 +62,6 @@ vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<cr>", {})
 
 -- Chat
 
-vim.api.nvim_set_keymap("n", "<leader>a", ":CopilotChat ", {})
-
 -- toggel comments
 
 vim.api.nvim_set_keymap("n", "<leader>7", ":CommentToggle<cr>", {})

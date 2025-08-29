@@ -8,6 +8,7 @@ return {
                 javascriptreact = { "prettier" },
                 typescriptreact = { "prettier" },
                 vue = { "prettier" },
+                java = { "prettier" },
                 css = { "prettier" },
                 scss = { "prettier" },
                 html = { "prettier" },

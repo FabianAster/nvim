@@ -1,4 +1,4 @@
 return {
-  "goerz/jupytext.vim",
-  lazy = false,
+    "goerz/jupytext.vim",
+    lazy = false,
 }
