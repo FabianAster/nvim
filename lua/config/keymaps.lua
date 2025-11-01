@@ -73,14 +73,50 @@ vim.api.nvim_set_keymap("n", "<leader>i", ":ToggleTerm<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>ga", ":ToggleTermToggleAll<cr>", {})
 
 local Terminal = require("toggleterm.terminal").Terminal
-local htop =
-    Terminal:new({ cmd = "htop", hidden = true, direction = "float", close_on_exit = true, start_in_insert = true })
+local htop = Terminal:new({
+    cmd = "htop",
+    hidden = true,
+    direction = "float",
+    close_on_exit = true,
+    start_in_insert = true,
+    on_open = function(term)
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<Esc>", [[<C-\><C-n>i<Esc>]], { noremap = true, silent = true })
+    end,
+})
 
 function htop_term()
     htop:toggle()
 end
 
 vim.api.nvim_set_keymap("n", "<leader>gp", "<cmd>lua htop_term()<CR>", { noremap = true, silent = true })
+
+local k9s = Terminal:new({
+    cmd = "k9s",
+    hidden = true,
+    direction = "float",
+    close_on_exit = true,
+    start_in_insert = false,
+    on_open = function(term)
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<Esc>", [[<C-\><C-n>i<Esc>]], { noremap = true, silent = true })
+        vim.api.nvim_buf_set_keymap(
+            term.bufnr,
+            "t",
+            "<C-c>",
+            [[<C-\><C-n>:lua k9s_term()<CR>i]],
+            { noremap = true, silent = true }
+        )
+    end,
+})
+
+k9s:toggle() -- Open (starts process)
+k9s:toggle() -- Hide (but process stays alive)
+
+function k9s_term()
+    k9s:toggle()
+end
+
+vim.api.nvim_set_keymap("n", "<leader>gk", "<cmd>lua k9s_term()<CR>", { noremap = true, silent = true })
+
 vim.api.nvim_command("Copilot disable")
 
 -- jupyther
