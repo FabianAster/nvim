@@ -13,6 +13,7 @@ return {
                 window = {
                     width = 0.4,
                 },
+                model = "claude-sonnet-4.5",
             }
         end,
         keys = {
@@ -38,7 +39,7 @@ return {
                 "<leader>a",
                 function()
                     vim.ui.input({
-                        prompt = "Quick Chat #selection: ",
+                        prompt = "Chat #selection: ",
                     }, function(input)
                         if input ~= "" then
                             require("CopilotChat").ask(input)
@@ -65,6 +66,9 @@ return {
                 callback = function()
                     vim.opt_local.relativenumber = false
                     vim.opt_local.number = false
+                    vim.opt_local.modifiable = true
+                    vim.opt_local.readonly = false
+                    vim.opt_local.swapfile = false
                 end,
             })
 

@@ -123,9 +123,16 @@ vim.api.nvim_command("Copilot disable")
 
 vim.api.nvim_set_keymap("v", "<leader>e", ":<C-u>MoltenEvaluateVisual<CR>gv", {})
 
-vim.api.nvim_set_keymap("n", "<leader>cg", ":lua vim.lsp.buf.hover()<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>dh", ":lua vim.lsp.buf.hover()<CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>ct", ":TodoTelescope<CR>", {})
+
+vim.api.nvim_set_keymap(
+    "n",
+    "<leader>xi",
+    ":lua vim.lsp.buf.code_action({ context = { only = { 'source.organizeImports' } }, apply = true })<CR>",
+    {}
+)
 
 vim.api.nvim_set_keymap(
     "n",
