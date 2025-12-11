@@ -1,78 +1,16 @@
+-- lua/plugins/copilotchat.lua
 return {
-    {
-        "CopilotC-Nvim/CopilotChat.nvim",
-        branch = "main",
-        cmd = "CopilotChat",
-        opts = function()
-            local user = vim.env.USER or "User"
-            user = user:sub(1, 1):upper() .. user:sub(2)
-            return {
-                auto_insert_mode = true,
-                question_header = "  " .. user .. " ",
-                answer_header = "  Copilot ",
-                window = {
-                    width = 0.4,
-                },
-                model = "claude-sonnet-4.5",
-            }
-        end,
-        keys = {
-            { "<c-s>", "<CR>", ft = "copilot-chat", desc = "Submit Prompt", remap = true },
-            { "<leader>A", "", desc = "+ai", mode = { "n", "v" } },
-            {
-                "<leader>Aa",
-                function()
-                    return require("CopilotChat").toggle()
-                end,
-                desc = "Toggle (CopilotChat)",
-                mode = { "n", "v" },
-            },
-            {
-                "<leader>Ax",
-                function()
-                    return require("CopilotChat").reset()
-                end,
-                desc = "Clear (CopilotChat)",
-                mode = { "n", "v" },
-            },
-            {
-                "<leader>a",
-                function()
-                    vim.ui.input({
-                        prompt = "Chat #selection: ",
-                    }, function(input)
-                        if input ~= "" then
-                            require("CopilotChat").ask(input)
-                        end
-                    end)
-                end,
-                desc = "Quick Chat (CopilotChat)",
-                mode = { "n", "v" },
-            },
-            {
-                "<leader>Ap",
-                function()
-                    require("CopilotChat").select_prompt()
-                end,
-                desc = "Prompt Actions (CopilotChat)",
-                mode = { "n", "v" },
-            },
-        },
-        config = function(_, opts)
-            local chat = require("CopilotChat")
+  "CopilotC-Nvim/CopilotChat.nvim",
+  branch = "main",
+  cmd = "CopilotChat",
 
-            vim.api.nvim_create_autocmd("BufEnter", {
-                pattern = "copilot-chat",
-                callback = function()
-                    vim.opt_local.relativenumber = false
-                    vim.opt_local.number = false
-                    vim.opt_local.modifiable = true
-                    vim.opt_local.readonly = false
-                    vim.opt_local.swapfile = false
-                end,
-            })
+  opts = function()
+    return require("config.copilotchat.opts")()
+  end,
 
-            chat.setup(opts)
-        end,
-    },
+  keys = require("config.copilotchat.keys"),
+
+  config = function(_, opts)
+    require("config.copilotchat.setup")(opts)
+  end,
 }
